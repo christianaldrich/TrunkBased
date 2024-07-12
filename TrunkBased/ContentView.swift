@@ -8,12 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var database : Learnable = SampleStudentViewModel()
+    
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button{
+                let isSuccess = database.getStudent()
+            
+                print(isSuccess)
+                
+                
+                
+            } label: {
+                Text("Search Learner")
+            }
         }
         .padding()
     }
