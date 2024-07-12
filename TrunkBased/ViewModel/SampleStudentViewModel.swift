@@ -9,7 +9,12 @@ import Foundation
 
 class SampleStudentViewModel: Learnable {
     func getStudent() -> [String] {
-        return []
+        let randomNum = Int.random(in: 1...10)
+        var studentArray: [String] = []
+        for i in 1...randomNum{
+            studentArray.append("Sample Student \(i)")
+        }
+        return studentArray
     }
     
     func editStudent() -> Bool {
