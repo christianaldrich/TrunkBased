@@ -10,15 +10,15 @@ import SwiftUI
 struct ContentView: View {
     
     var database : Learnable = SampleStudentViewModel()
+    @State var isSuccess = []
     
     
     var body: some View {
         VStack {
-            Button{
-                let isSuccess = database.getStudent()
+            Text("\(isSuccess)")
             
-                print(isSuccess)
-                
+            Button{
+                isSuccess = database.getStudent()
                 
                 
             } label: {
